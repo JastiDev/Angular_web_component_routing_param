@@ -41,7 +41,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngelement"
+    }
+  },
+  "defaultProject": "ngelement",
+  "cli": {
+    "analytics": "ff05a6e9-8c7b-493d-9723-3842168f8e75"
+  }
 }

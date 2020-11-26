@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .modal{
+            position: fixed;
+            top: calc(50% - 30%);
+            left: calc(50% - 40%);
+            z-index: 1000;
+            width: 80%;
+            height: 60%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: red;
+        }
+    </style>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.26/zone.min.js"></script> -->
+</head>
+<body>
+
+    <div id="ng-app-container" class="modal">
+    </div>
+
+    <script type="text/javascript">
+      const loadCss = function(url){
+               // Get HTML head element
+        var head = document.getElementsByTagName('HEAD')[0];
+
+        // Create new link Element
+        var link = document.createElement('link');
+
+        // set the attributes for link element
+        link.rel = 'stylesheet';
+
+        link.type = 'text/css';
+
+        link.href = url;
+
+        // Append link element to HTML head
+        head.appendChild(link);
+      }
+
+      const loadScript = function(url) {
+        return new Promise(function(resolve, reject) {
+          const script = document.createElement('script');
+          script.src = url;
+
+          script.addEventListener('load', function() {
+              // The script is loaded completely
+              resolve(true);
+          });
+
+          document.head.appendChild(script);
+        });
+      };
+
+      const loadAngularApp = async function(key){
+        loadCss("https://firebasestorage.googleapis.com/v0/b/design-pad-a3fe7.appspot.com/o/test%2Fstyles.css?alt=media&token=7fee3a5f-2f49-4c0e-87e2-9599c7a1f667");
+        await loadScript("https://firebasestorage.googleapis.com/v0/b/design-pad-a3fe7.appspot.com/o/test%2Fngelement.js?alt=media&token=04e8b407-867b-4b91-ae08-f51c0392be43");
+
+        var elem = document.createElement('my-ng-element');
+        elem.setAttribute('title', 'key='+key);
+        document.getElementById('ng-app-container').appendChild(elem);
+      }
+
+      loadAngularApp(1);
+    </script>
+</body>
+</html>
