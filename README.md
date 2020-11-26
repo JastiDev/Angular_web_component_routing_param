@@ -1,10 +1,10 @@
-# Useful links
-
-`http://chatwithme.io/angularjs%20upgrade/web%20components/angular%20elements/angular/angularjs/ngupgrade/2019/04/25/shipping-an-angular-application-as-a-web-component.html`
-
-`https://htmldom.dev/load-a-javascript-file-dynamically/`
-
-`https://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript`
+<h1>Useful posts</h1>
+<div><a href="https://angular.io/guide/elements">Angular web component</a></div>
+<div>
+  <a href="http://chatwithme.io/angularjs%20upgrade/web%20components/angular%20elements/angular/angularjs/ngupgrade/2019/04/25/shipping-an-angular-application-as-a-web-component.html">shipping-an-angular-application-as-a-web-component</a>
+</div>
+<div><a href="https://htmldom.dev/load-a-javascript-file-dynamically/">load js</a></div>
+<div><a href="https://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript">load css</a></div>
 
 <h1>How to do it?</h1>
 <span>This angular app is modified a little to produce "web component".</span><br/>
